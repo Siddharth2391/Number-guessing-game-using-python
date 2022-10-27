@@ -8,7 +8,7 @@ def basic():
     app.geometry("500x500")
     app.minsize(500,500)
     app.maxsize(500,500)
-    photo = PhotoImage(file = "res/guess.png")
+    photo = PhotoImage(file = "guess.png")
     app.iconphoto(False, photo)
     # appmenu=Menu(app)
     # appmenu.add_command(label='Start')
@@ -78,7 +78,7 @@ app.config(menu=mymenu)
 
 
 # set display image
-i=Image.open('res/guess.png',mode='r')
+i=Image.open('guess.png',mode='r')
 img=ImageTk.PhotoImage(i)
 l=Label(image=img).pack(pady=30)
 
@@ -89,7 +89,7 @@ comp=random.randint(1, 101)
 print(comp)
 userv=StringVar()
 user=Entry(app,textvariable=userv,justify=CENTER,relief=FLAT,borderwidth=2,font='Helvicta 18 bold').pack(pady=10) 
-i= Image.open('res/bt.png')
+i= Image.open('bt.jpg')
 resized_image= i.resize((150,50), Image.ANTIALIAS)
 new_image= ImageTk.PhotoImage(resized_image)
 submit=Button(app,image=new_image,command=result,font='Helvicta 18 bold',relief=FLAT).pack(pady=10)
